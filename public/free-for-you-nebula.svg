@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 340" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#09234f"/>
+      <stop offset=".4" stop-color="#090d46"/>
+      <stop offset=".7" stop-color="#13063d"/>
+      <stop offset="1" stop-color="#26083e"/>
+    </linearGradient>
+    <radialGradient id="blue-cloud" cx=".38" cy=".56" r=".54">
+      <stop offset="0" stop-color="#075bd3" stop-opacity=".88"/>
+      <stop offset=".38" stop-color="#1036a2" stop-opacity=".56"/>
+      <stop offset="1" stop-color="#08103f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violet-cloud" cx=".72" cy=".42" r=".42">
+      <stop offset="0" stop-color="#6420b4" stop-opacity=".68"/>
+      <stop offset=".58" stop-color="#351078" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#19063e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pink-cloud" cx=".96" cy=".3" r=".4">
+      <stop offset="0" stop-color="#bb267f" stop-opacity=".74"/>
+      <stop offset=".5" stop-color="#7c1d83" stop-opacity=".48"/>
+      <stop offset="1" stop-color="#210840" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="nebula-noise" x="-10%" y="-20%" width="120%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency=".004 .009" numOctaves="5" seed="12" result="cloud"/>
+      <feColorMatrix in="cloud" type="matrix" values="0.55 0 0 0 0.0 0 0.35 0 0 0.01 0 0 0.8 0 0.08 0.42 0.42 0.42 0 0"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-60%" width="160%" height="220%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+  </defs>
+  <rect width="1800" height="340" fill="url(#base)"/>
+  <rect width="1800" height="340" fill="url(#blue-cloud)"/>
+  <rect width="1800" height="340" fill="url(#violet-cloud)"/>
+  <rect width="1800" height="340" fill="url(#pink-cloud)"/>
+  <g filter="url(#soft)" opacity=".48">
+    <path d="M-80 245C185 84 327 312 568 136s324 85 486-9 303-107 422 18 257-59 417-108v235c-271 166-321-85-542 52S952 199 731 293 294 182-80 342Z" fill="#123ed3"/>
+    <path d="M-42 48C188 172 271 18 481 157s308-67 478 27 236 143 396 28 318 84 486 92V-62H-42Z" fill="#47148f"/>
+    <path d="M1100 360c99-162 153-263 293-203s184-110 441-75v307Z" fill="#c1288c"/>
+  </g>
+  <rect width="1800" height="340" fill="#839fff" opacity=".48" filter="url(#nebula-noise)"/>
+  <g fill="#fff" opacity=".9">
+    <circle cx="78" cy="63" r="1.7"/><circle cx="148" cy="271" r="1.2"/><circle cx="276" cy="111" r="1.6"/>
+    <circle cx="392" cy="42" r="1.4"/><circle cx="508" cy="241" r="1.5"/><circle cx="644" cy="91" r="1.8"/>
+    <circle cx="747" cy="294" r="1.3"/><circle cx="866" cy="53" r="1.5"/><circle cx="994" cy="196" r="1.4"/>
+    <circle cx="1118" cy="77" r="1.9"/><circle cx="1236" cy="271" r="1.2"/><circle cx="1355" cy="130" r="1.6"/>
+    <circle cx="1480" cy="52" r="1.4"/><circle cx="1588" cy="236" r="1.7"/><circle cx="1710" cy="99" r="1.5"/>
+  </g>
+</svg>
