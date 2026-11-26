@@ -1,11 +1,11 @@
 # StreamFlix
 
-The site runs on Next.js using the App Router and can be deployed on Vercel.
+The site uses Vinext's App Router compatibility layer and the Nitro Vite plugin for Vercel deployment.
 The existing pages, styles, and public assets are in `app/` and `public/`.
 
 ## Prerequisites
 
-- Node.js `>=22.13.0`
+- Node.js 24.x
 
 ## Quick Start
 
@@ -15,12 +15,16 @@ npm run dev
 npm run build
 ```
 
+For a local Vercel-output build and route checks, run `npm test`. The Vercel
+project should use the Nitro framework preset and `npm run build`; remove any
+old dashboard overrides for `vinext build` or a static output directory.
+
 This starter does not use `wrangler.jsonc`.
 
 ## Legacy starter files
 
-Cloudflare Worker, D1, and Vite starter files remain in the repository for reference;
-they are not used by the Next.js application or its Vercel build. The optional
+Cloudflare Worker and D1 starter files remain in the repository for reference;
+they are not used by the Vinext/Nitro Vercel build. The optional
 Cloudflare-specific authentication and database helpers below require a compatible
 hosting environment and are not active in the current site.
 
