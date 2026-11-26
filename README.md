@@ -1,8 +1,7 @@
-# vinext-starter
+# StreamFlix
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+The site runs on Next.js using the App Router and can be deployed on Vercel.
+The existing pages, styles, and public assets are in `app/` and `public/`.
 
 ## Prerequisites
 
@@ -18,14 +17,12 @@ npm run build
 
 This starter does not use `wrangler.jsonc`.
 
-## Included Shape
+## Legacy starter files
 
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
+Cloudflare Worker, D1, and Vite starter files remain in the repository for reference;
+they are not used by the Next.js application or its Vercel build. The optional
+Cloudflare-specific authentication and database helpers below require a compatible
+hosting environment and are not active in the current site.
 
 ## Workspace Auth Headers
 
